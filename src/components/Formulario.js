@@ -6,7 +6,7 @@ const Formulario = ({guardarBusqueda}) => {
     const [termino, guardarTermino] = useState('');
     const [error, guardarError] = useState(false);
     
-    const buscarImagenes = e => {
+    const buscar = e => {
         e.preventDefault();
     
     //validar
@@ -22,14 +22,14 @@ const Formulario = ({guardarBusqueda}) => {
     return(
         <div>
         <form
-            onSubmit={buscarImagenes}
+            onSubmit={buscar}
         >
             
             <div className="row">
                 <div className="form-group col-md-8">
                     <input type="text"
                     className="form-control form-control-lg"
-                    placeholder="Buscar imagen, ejemplo: futbol o café"
+                    placeholder="Buscar contenido multimedia, ejemplo: Madonna, Batman, Caribe"
                     onChange={e => guardarTermino(e.target.value)}
                      />
                 </div>
