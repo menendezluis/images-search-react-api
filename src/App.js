@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const consultarApi = async () => {
       if(busqueda === '' ) return;
-      const imagenesPorPagina = 2;
+      const imagenesPorPagina = 8;
       const key = '20078252-fc3369c3a9adbb3bf23221313';
       const url = `https://pixabay.com/api/?key=${key}&q=${busqueda}&per_page=${imagenesPorPagina}
       &page=${paginaActual}`;  
